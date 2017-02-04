@@ -65,8 +65,9 @@ h6 {
 }
 
 p {
-    margin-left: .5em;
-    margin-right: .5em;
+    font-size: 1.2em;
+    line-height: 125%;
+    padding: .5em;
 }
 
 p,
@@ -94,30 +95,9 @@ body {
     line-height: 1;
 }
 
-blockquote,
-q {
-    quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-    content: '';
-    content: none;
-}
-
 table {
     border-collapse: collapse;
     border-spacing: 0;
-}
-
-body {
-//    display: flex;
-    justify-content: center;
-    font-size: 16px;
-    line-height: 1.5em;
-    padding: 25px;
 }
 
 .container {
@@ -179,11 +159,7 @@ footer {
 
 main {
     display: flex;
-    flex-grow: 2;
-}
-
-article {
-    width: 70%;
+    flex-direction: column;
 }
 
 aside {
@@ -209,12 +185,6 @@ li {
     line-height: 1.5em;
 }
 
-p {
-    font-size: 1.2em;
-    line-height: 125%;
-    padding: .5em;
-}
-
 footer {
     display: flex;
     flex-direction: column;
@@ -222,11 +192,10 @@ footer {
     align-items: center;
 }
 
+/* Index PAGE */
 
-/* HOME PAGE */
-
-#home_page {
-    .home_link {
+#index_page {
+    .index_link {
         background-color: @lightColor;
     }
 }
@@ -243,7 +212,6 @@ RESUME PAGE
     }
 }
 
-
 /*
 
 TABLET STYLESHEET
@@ -254,10 +222,30 @@ The following CSS affects all screen sizes larger than 480 pixels wide.
 
 @media only screen and (min-width: 481px) {
     body {
-        font-size: 14px;
+        font-size: 18px;
+    }
+
+    nav {
+
+        ul {
+            display: inline-flex;
+            width: 100%;
+            justify-content: space-between;
+
+            li, li:first-of-type {
+                border: none;
+            }
+        }
+    }
+
+    main {
+        flex-direction: row;
+    }
+
+    article {
+            width: 70%;
     }
 }
-
 
 /*
 
@@ -265,8 +253,8 @@ DESKTOP STYLESHEET
 
 */
 
-@media only screen and (min-width) {
+@media only screen and (min-width: 1025px) {
     body {
-        font-size: 16px;
+        font-size: 20px;
     }
 }
