@@ -1,0 +1,37 @@
+// out: null
+
+/*
+File Name: mixins.less
+Date: 02/03/17
+Programmer: Dillon Downey
+*/
+
+/* Parametric mixins for font attributes*/
+
+.headerFontAttributes(@fontColor; @fontSize;) {
+     color: @fontColor;
+     font-size: @fontSize;
+     font-weight: bold;
+     margin-left: 0;
+     margin-right: 0;
+     margin-top: @fontSize;
+     margin-bottom: @fontSize / 2;
+     text-transform: uppercase;
+     letter-spacing: 1px;
+}
+
+.textProperties(@fontColor; @fontSize; @fontWeight; @fontFamily; @fontLineHeight;) {
+     color: @fontColor;
+     font-size: @fontSize;
+     font-weight: @fontWeight;
+     font-family: @fontFamily;
+     line-height: @fontLineHeight;
+}
+
+/* Parametric mixins for box properties */
+
+.boxProperties(@borderRadius; @boxShadow; @color;) {
+     border-radius: @borderRadius;
+     box-shadow: @boxShadow @boxShadow @color;
+     color: @color;
+}
