@@ -1,0 +1,272 @@
+/*
+Author: Dillon Downey
+Date: 01/29/17
+*/
+
+
+/*
+
+CSS imports
+
+*/
+
+@import 'reset.less'; // Import 1st
+@import 'generic.less'; // Import 2nd
+@import url('https://fonts.googleapis.com/css?family=Open+Sans'); // Import 3rd
+@import 'palette.less'; // Import 4th
+@import 'mixins.less'; // Import 5th
+
+/*
+
+Mobile Stylesheet
+
+*/
+
+header,
+nav,
+main,
+aside,
+footer {
+    padding: 1em;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1 {
+    .headerFontAttributes(@darkColor;
+    1.8em);
+}
+
+h2 {
+    .headerFontAttributes(@darkColor;
+    1.4em);
+}
+
+h3 {
+    .headerFontAttributes(@darkColor;
+    1.1em);
+}
+
+h4 {
+    .headerFontAttributes(@darkColor;
+    .9em);
+}
+
+h5 {
+    .headerFontAttributes(@darkColor;
+    .85em);
+}
+
+h6 {
+    .headerFontAttributes(@darkColor;
+    .75em);
+}
+
+p {
+    margin-left: .5em;
+    margin-right: .5em;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 1em;
+    margin-bottom: 1em;
+}
+
+body {
+    background-color: @color3;
+    .textProperties(@darkColor;
+    16px;
+    normal;
+    "Open Sans",
+    Helvetica,
+    Arial,
+    sans-serif;
+    1.75em;
+    );
+    line-height: 1;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+body {
+//    display: flex;
+    justify-content: center;
+    font-size: 16px;
+    line-height: 1.5em;
+    padding: 25px;
+}
+
+.container {
+    display: flex;
+    flex-flow: row wrap;
+    background-color: #CFF09E;
+    margin: 2em;
+}
+
+header,
+nav,
+main,
+footer {
+    flex: 1 100%;
+}
+
+nav {
+    border-bottom: 1px solid @darkColor;
+}
+
+nav,
+footer {
+    padding: 0;
+    background-color: @color1;
+    letter-spacing: 1px;
+    h2 {
+        .textProperties(@color5;
+        1.5em;
+        bold;
+        "Open Sans",
+        Helvetica,
+        Arial,
+        sans-serif;
+        1em;
+        );
+    }
+    ul {
+        padding: 0;
+    }
+    li {
+        list-style-type: none;
+        text-align: center;
+        padding: 1em;
+        border-bottom: 1px solid @darkColor;
+        a {
+            text-decoration: none;
+            .textProperties(@color4;
+            1.5em;
+            bold;
+            Georgia,
+            Helvetica,
+            Arial,
+            san-serif;
+            1em;
+            );
+        }
+    }
+}
+
+main {
+    display: flex;
+    flex-grow: 2;
+}
+
+article {
+    width: 70%;
+}
+
+aside {
+    border-top: 2px solid @darkColor;
+    border-bottom: 2px solid @darkColor;
+    background-color: #A8DBA8;
+    margin: .5em .5em;
+}
+
+ol,
+ul {
+    list-style: none;
+}
+
+ul {
+    list-style-type: disc;
+    list-style-position: inside;
+    padding-left: .5em;
+    padding-right: .5em;
+}
+
+li {
+    line-height: 1.5em;
+}
+
+p {
+    font-size: 1.2em;
+    line-height: 125%;
+    padding: .5em;
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+
+/* HOME PAGE */
+
+#home_page {
+    .home_link {
+        background-color: @lightColor;
+    }
+}
+
+/*
+
+RESUME PAGE
+
+*/
+
+#resume_page {
+    .resume_link {
+        background-color: @lightColor;
+    }
+}
+
+
+/*
+
+TABLET STYLESHEET
+
+The following CSS affects all screen sizes larger than 480 pixels wide.
+
+*/
+
+@media only screen and (min-width: 481px) {
+    body {
+        font-size: 14px;
+    }
+}
+
+
+/*
+
+DESKTOP STYLESHEET
+
+*/
+
+@media only screen and (min-width) {
+    body {
+        font-size: 16px;
+    }
+}
