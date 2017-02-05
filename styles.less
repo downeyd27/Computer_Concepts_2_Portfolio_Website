@@ -1,8 +1,7 @@
 /*
 Author: Dillon Downey
-Date: 01/29/17
+Date: 02/04/17
 */
-
 
 /*
 
@@ -68,17 +67,18 @@ p {
     font-size: 1.2em;
     line-height: 125%;
     padding: .5em;
+    margin-top: .5em;
+    margin-bottom: .5em;
 }
 
-p,
 h1,
 h2,
 h3,
 h4,
 h5,
 h6 {
-    margin-top: 1em;
-    margin-bottom: 1em;
+    margin-top: .5em;
+    margin-bottom: .5em;
 }
 
 body {
@@ -95,10 +95,6 @@ body {
     line-height: 1;
 }
 
-table {
-    border-collapse: collapse;
-    border-spacing: 0;
-}
 
 .container {
     display: flex;
@@ -169,16 +165,14 @@ aside {
     margin: .5em .5em;
 }
 
-ol,
-ul {
-    list-style: none;
+ol {
+    list-style-type: decimal;
+    padding-left: 1em;
 }
 
 ul {
     list-style-type: disc;
-    list-style-position: inside;
-    padding-left: .5em;
-    padding-right: .5em;
+    padding-left: 1em;
 }
 
 li {
@@ -190,6 +184,7 @@ footer {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    font-size: .8em;
 }
 
 /* Index PAGE */
@@ -209,6 +204,56 @@ RESUME PAGE
 #resume_page {
     .resume_link {
         background-color: @lightColor;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    table {
+        border-collapse: collapse;
+        border-spacing: 0;
+        text-align: center;
+        margin: 0 auto;
+
+        td, th {
+            vertical-align: middle;
+            border: 2px solid @darkColor;
+            padding: .5em;
+        }
+
+        th {
+            background-color: lighten(@color2, 15%);
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+
+        td {
+            background-color: @color3;
+            font-size: 1em;
+        }
+    }
+
+    dl {
+        border: 1px solid @darkColor;
+        background-color: @color3;
+        margin-top: .5em;
+
+        div {
+            width: 400px;
+            margin: 0 auto;
+        }
+    }
+
+    dt {
+        font-weight: bold;
+    }
+
+    dt, dd {
+        display: inline-block;
+        margin: .2em;
     }
 }
 
@@ -243,7 +288,7 @@ The following CSS affects all screen sizes larger than 480 pixels wide.
     }
 
     article {
-            width: 70%;
+        width: 70%;
     }
 }
 
