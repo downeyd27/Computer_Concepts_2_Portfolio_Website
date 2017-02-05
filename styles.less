@@ -100,7 +100,6 @@ body {
     display: flex;
     flex-flow: row wrap;
     background-color: #CFF09E;
-    margin: 2em;
 }
 
 header,
@@ -119,6 +118,7 @@ footer {
     padding: 0;
     background-color: @color1;
     letter-spacing: 1px;
+
     h2 {
         .textProperties(@color5;
         1.5em;
@@ -130,14 +130,18 @@ footer {
         1em;
         );
     }
+
     ul {
         padding: 0;
+        background-color: @color2;
     }
+
     li {
         list-style-type: none;
         text-align: center;
         padding: 1em;
         border-bottom: 1px solid @darkColor;
+
         a {
             text-decoration: none;
             .textProperties(@color4;
@@ -162,17 +166,24 @@ aside {
     border-top: 2px solid @darkColor;
     border-bottom: 2px solid @darkColor;
     background-color: #A8DBA8;
-    margin: .5em .5em;
+    margin: 0 auto;
 }
 
+ol,
+ul {
+    padding: .5em 2em;
+    background-color: lighten(@color3, 15%);
+
+}
 ol {
     list-style-type: decimal;
-    padding-left: 1em;
 }
 
 ul {
     list-style-type: disc;
-    padding-left: 1em;
+//    list-style-position: inside;
+//    padding-left: 1em;
+    background-color: lighten(@color3, 15%);
 }
 
 li {
@@ -206,12 +217,6 @@ RESUME PAGE
         background-color: @lightColor;
     }
 
-    main {
-        display: flex;
-        flex-direction: column;
-        width: 100%;
-    }
-
     table {
         border-collapse: collapse;
         border-spacing: 0;
@@ -239,7 +244,7 @@ RESUME PAGE
     dl {
         border: 1px solid @darkColor;
         background-color: @color3;
-        margin-top: .5em;
+        margin: .5em 0;
 
         div {
             width: 300px;
@@ -289,6 +294,10 @@ The following CSS affects all screen sizes larger than 480 pixels wide.
 
     article {
         width: 70%;
+    }
+
+    aside {
+        margin-left: 1em;
     }
 }
 
